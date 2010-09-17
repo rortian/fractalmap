@@ -1,0 +1,20 @@
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans+Std+Light);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans+Mono);
+
+h1 { font-family: 'Josefin Sans Std Light', arial, serif;
+     text-align: center;
+}
+
+h4 { font-family: 'Droid Sans Mono', arial, serif;
+	font-size:14px;
+	text-align: center;
+	}
+
+.tiles {
+	padding: 5px;
+}
+
+.gwt-StackLayoutPanelHeader {
+font-family: 'Droid Sans Mono', arial, serif;
+	font-size:14px;
+	text-align: center; }

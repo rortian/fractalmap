@@ -1,0 +1,113 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.label { text-align:center; }
+		.closer {	line-height: 12px; }
+	</ui:style>
+	<g:StackLayoutPanel unit='PX'>
+		<g:stack>
+			<g:header size='20'>Links</g:header>
+			<g:LayoutPanel>
+				<g:layer top='10px' left='10%' right='10%' height='400px'>
+					<g:FlowPanel ui:field='defaultLinksPanel' addStyleNames='{style.closer}'></g:FlowPanel>
+				</g:layer>
+				<g:layer top='410px' left='10%' right='10%' height='20px'>
+					<g:FlowPanel ui:field='customLinksPanel'></g:FlowPanel>
+				</g:layer>
+				<g:layer top='440px' height='150px'>
+					<g:LayoutPanel>
+						<g:layer top='0px' height='25px' left='10%' right='10%'>
+							<g:Button ui:field='generateLink'>Generate Link</g:Button>
+						</g:layer>
+						<g:layer top='50px' height='25px' left='10%' right='10%'>
+							<g:Anchor 
+							href='http://blog.pseudopattern.com/2010/06/site-up.html'>Help</g:Anchor>
+						</g:layer>
+						<g:layer top='80px' height='25px' left='10%' right='10%'>
+							<g:Anchor 
+							href='http://www.youtube.com/watch?v=-wUgNJzAz_8'>YouTube Demo</g:Anchor>
+						</g:layer>
+					</g:LayoutPanel>
+				</g:layer>
+			</g:LayoutPanel>
+		</g:stack>
+		<g:stack>
+			<g:header size='20'>Parameters</g:header>
+			<g:LayoutPanel ui:field='paramPanel' >
+				<g:layer top='10px' height='800px' left='10%' right='10%'
+				addStyleNames='{style.closer}'>
+				<g:FlowPanel>
+					<g:Image url='/images/singularperturbation.png' width='120px'></g:Image>
+					
+					<g:Label addStyleNames='{style.label}'>Lambda real</g:Label>
+				
+					<g:TextBox addStyleNames='{style.label}' ui:field='lambdaReal' />
+					
+				
+					<g:Label addStyleNames='{style.label}'>Lambda i</g:Label>
+		
+				
+					<g:TextBox addStyleNames='{style.label}' ui:field='lambdaImag' />
+					<g:HTML><br/></g:HTML>
+					<g:Button ui:field='planeButton'>Choose from Plane</g:Button>
+					<g:HTML><br/></g:HTML>
+					<g:Label addStyleNames='{style.label}'>m</g:Label>
+				
+				
+					<g:TextBox addStyleNames='{style.label}' ui:field='mBox' />
+					<g:HTML><br/></g:HTML>
+				
+					<g:Label addStyleNames='{style.label}'>n</g:Label>
+				
+					<g:TextBox addStyleNames='{style.label}' ui:field='nBox' />
+					<g:HTML><br/></g:HTML>
+					<g:Button ui:field='applyOne' >Apply</g:Button>
+					<g:HTML><br/></g:HTML>
+					
+					</g:FlowPanel>
+				</g:layer>
+			</g:LayoutPanel>
+		</g:stack>
+		<g:stack>
+			<g:header size='20'>Colors</g:header>
+			<g:LayoutPanel ui:field='colorPanel' >
+				<g:layer top='10px' height='16px'>
+					<g:Label addStyleNames='{style.label}'>Color Scheme</g:Label>
+				</g:layer>
+				<g:layer left='10%' right='10%' top='36px' height='25px'>
+					<g:ListBox addStyleNames='{style.label}' ui:field='schemeList' />
+				</g:layer>
+				<g:layer top='71px' height='16px'>
+					<g:Label addStyleNames='{style.label}'>Scheme Parameter</g:Label>
+				</g:layer>
+				<g:layer left='10%' right='10%' top='97px' height='25px'>
+					<g:TextBox addStyleNames='{style.label}' ui:field='colorParam' />
+				</g:layer>
+				<g:layer left='10%' right='10%' top='132px' height='25px'>
+					<g:Button ui:field='applyTwo'>Apply</g:Button>
+				</g:layer>
+			</g:LayoutPanel>
+		</g:stack>
+		<g:stack>
+			<g:header size='20'>About</g:header>
+			<g:LayoutPanel>
+				<g:layer top='10px' height='800px' left='10%' right='10%'>
+					<g:FlowPanel>
+					<g:HTML>Pseudomap tracks how fast various points escape from a cicle 
+					of radius 3 when mapped by a sigular pertubation of z^n. Some background
+					and links can be found <a href="http://blog.pseudopattern.com">here</a>.
+					<br/><br/>
+					This was written by Jeremy Corbett. You can email him at jeremy.lael at Google's
+					popular email service.
+					<br/><br/>
+					If you'd like to discuss this in a more modern forum, please join this <a
+					href="https://wave.google.com/wave/waveref/googlewave.com/w+6hV8Fhr2A">
+					wave</a> or start a wave with jeremy.lael at googlewave.com.
+					</g:HTML>
+					</g:FlowPanel>
+				</g:layer>
+			</g:LayoutPanel>
+		</g:stack>
+	</g:StackLayoutPanel>
+</ui:UiBinder> 

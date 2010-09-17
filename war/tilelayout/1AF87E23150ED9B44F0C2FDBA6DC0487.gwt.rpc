@@ -1,0 +1,8 @@
+com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException, true, true, true, true, com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException/3936916533, 3936916533
+com.pseudopattern.map.client.DefaultLinksService, false, false, false, false, _, 2944393020
+com.pseudopattern.map.client.LinkInfo, true, true, false, false, com.pseudopattern.map.client.LinkInfo/1286354015, 1286354015
+[Lcom.pseudopattern.map.client.LinkInfo;, true, true, false, false, [Lcom.pseudopattern.map.client.LinkInfo;/3653812607, 3653812607
+java.lang.Exception, true, false, true, false, java.lang.Exception/1920171873, 1920171873
+java.lang.RuntimeException, true, false, true, false, java.lang.RuntimeException/515124647, 515124647
+java.lang.String, true, true, true, true, java.lang.String/2004016611, 2004016611
+java.lang.Throwable, true, false, true, false, java.lang.Throwable/2953622131, 2953622131

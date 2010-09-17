@@ -1,0 +1,25 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.yo {	z-index: 3;
+				background-color: #ffffff; }
+		.hi {	line-height: 10px;  }	
+	</ui:style>
+	
+		<g:LayoutPanel ui:field='layout' addStyleNames='{style.yo}'>
+			<g:layer left='0px' width='500px' top='0px' height='500px'>
+				<g:Image ui:field='image' url='/images/unitsquare.png' ></g:Image>
+			</g:layer>
+			<g:layer top='520px' height='60px'>
+				<g:FlowPanel addStyleNames='{style.hi}' >
+					<g:InlineLabel>x=</g:InlineLabel>
+					<g:InlineLabel ui:field='xValue'></g:InlineLabel>
+					<g:HTML><br/></g:HTML>
+					<g:InlineLabel>y=</g:InlineLabel>
+					<g:InlineLabel ui:field='yValue'></g:InlineLabel>
+				</g:FlowPanel>
+			</g:layer>
+		</g:LayoutPanel>
+	
+</ui:UiBinder> 

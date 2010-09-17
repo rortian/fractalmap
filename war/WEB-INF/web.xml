@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>TileLayout.html</welcome-file>
+  </welcome-file-list>
+  
+  <!-- Servlets -->
+  
+  <servlet>
+  	<servlet-name>TileImageServlet</servlet-name>
+  	<servlet-class>com.pseudopattern.map.server.TileImageService</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>UploaderServlet</servlet-name>
+  	<servlet-class>com.pseudopattern.map.server.UploaderServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>AvailableSchemesServlet</servlet-name>
+  	<servlet-class>com.pseudopattern.map.server.AvailableSchemesServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>DefaultLinksServlet</servlet-name>
+  	<servlet-class>com.pseudopattern.map.server.DefaultLinksServiceImpl</servlet-class>
+  </servlet>
+  
+  
+  <servlet>
+  	<servlet-name>SlickServlet</servlet-name>
+  	<servlet-class>com.pseudopattern.map.server.SlickTiles</servlet-class>
+  </servlet>
+  
+  
+  
+  <servlet-mapping>
+  	<servlet-name>SlickServlet</servlet-name>
+  	<url-pattern>/slick/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>TileImageServlet</servlet-name>
+  	<url-pattern>/tiles/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>UploaderServlet</servlet-name>
+  	<url-pattern>/uploader/upload</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>AvailableSchemesServlet</servlet-name>
+  	<url-pattern>/tilelayout/schemes</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>DefaultLinksServlet</servlet-name>
+    <url-pattern>/tilelayout/links</url-pattern>
+  </servlet-mapping>
+  
+  <security-constraint>
+        <web-resource-collection>
+            <url-pattern>/uploader/*</url-pattern>
+            <url-pattern>Uploader.html</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+</web-app>
